@@ -1,0 +1,158 @@
+
+.top{
+    height:50px;
+    width: 100%;
+    padding:15px 35px;
+    justify-content: space-between;
+    text-align: center;
+    position: relative;
+}
+.top span{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:5px;
+    border-radius: 50%;
+    cursor: pointer;
+    /* font-size:1.7rem; */
+    background-color: #00000022;
+}
+.top span:active{
+    background-color:#00000077;
+}
+.top p{
+    font-size:.8rem;
+    font-weight: 400;
+}
+.top span{
+    position: absolute;
+    right:20px;
+    top:50%;
+}
+@media (min-width:768px){
+    app-weatherdetail{
+        display:none;
+    }
+    .top span{
+        display:none;
+    }
+}
+@media (max-width:768px){
+    .description div:nth-child(odd){
+        margin-left:20px !important;
+        
+    }
+    .description  div:nth-child(even){
+        margin-left: 30px;
+    }
+    .top{
+        text-align: center;
+    }
+    .temp .temperature{ 
+        font-size:110px !important;
+    }
+
+    app-weatherdetail{
+        display:block;
+    }
+}
+.top .name{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.name h3{
+    margin-left:1.5rem;
+}
+.title{
+    font-size:1.2rem;
+}
+.first-page{
+    position:relative;
+}
+.temp{
+  text-align: center;
+}
+.temp .temperature{
+    position:relative;
+    font-size:90px;
+}
+
+.temp span{
+    font-size: 20px;
+    position: absolute;
+    /* top: 1rem; */
+
+}
+.temp .status{
+    font-size:20px;
+}
+.temp img{
+
+    margin-bottom:-20px;
+}
+.description{
+    display:grid;
+    grid-row-gap: 1rem;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+}
+.description div:nth-child(odd){
+    margin-left:30px;
+}
+
+.description img{
+    margin-bottom:-10px;
+    height:30px; 
+}
+
+.weather-component{
+    padding-bottom:5px;
+    display:grid;
+    grid-template-rows:0fr 6fr 2fr 1fr;
+    height: 100vh;
+    align-items: center;
+}
+  .plus-button ,.success-checkmark{
+    border:none;
+    margin-left:1rem;
+	background-color: var(--light-background);
+	font-size: 16px;
+	height: 1.5em;
+	width: 1.5em;
+	border-radius: 999px;
+    position: relative;
+    cursor: pointer;
+  }
+	.plus-button::after,
+	.plus-button::before {
+		content: "";
+		display: block;
+		background-color: white;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	
+	.plus-button::before {
+		height: 1em;
+		width: 0.2em;
+	}
+
+	.plus-button::after {
+		height: 0.2em;
+		width: 1em;
+    }
+    .success-checkmark::after {
+        background:green;
+        content: '✔';
+        position: absolute;
+        left:0;
+        width: 100%; 
+        height: 100%;
+        text-align: center;
+        border-radius:50%;
+        /* box-shadow: inset 0 1px 3px rgba(0,0,0,.3) */
+      }

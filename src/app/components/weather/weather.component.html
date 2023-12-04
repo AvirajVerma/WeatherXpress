@@ -1,0 +1,38 @@
+<div class="weather-component" *ngIf="weather">
+    <div class="top">
+        <div class="name"><h3>{{city}}<br>
+            <p>{{time.time}}</p><p>{{time.day}}</p></h3>
+            <div *ngIf="!cityDetail.added;else tickBlock" (click)="addCity()" class="plus-button"></div>
+            <ng-template #tickBlock>
+                <div class="success-checkmark" (click) = "removeCity()"></div>
+            </ng-template>
+        </div>
+        <span class='search' (click) = (toggleSidebar())><img *ngIf="!uiSerivce.sideBarOpened;else cross"  src="../../../assets/icons/search.svg"></span>
+    </div>
+<ng-template #cross>
+    <img height="20"  src="../../../assets/icons/cross.svg">
+</ng-template>
+    <div class="first-page">
+        <div class="temp">
+            <img src='https://openweathermap.org/img/wn/{{todayIcon}}@2x.png'>
+            <div class="temperature">
+                {{weather.temp | number : '1.0-0' }}
+                <span>&deg; C</span>
+            </div>
+            <div class="status">{{weather.weather[0].main}}</div>
+        </div>
+    </div>
+    <div class="description">
+        <div><span><img src='https://openweathermap.org/img/wn/{{todayIcon}}@2x.png'></span> Today .
+        {{daily[0].weather[0].main}}</div>
+        <div>{{daily[0].temp.max| number : '1.0-0'}}&deg; / {{daily[0].temp.min| number : '1.0-0'}}&deg;</div>
+        <div><span><img src='https://openweathermap.org/img/wn/{{tomorrowIcon}}@2x.png'></span> Tomorrow . 
+        {{daily[1].weather[0].main}} </div><div> {{daily[1].temp.max| number : '1.0-0'}}&deg; / {{daily[1].temp.min| number : '1.0-0'}}&deg;</div>
+        <div><span><img src='https://openweathermap.org/img/wn/{{nextDayIcon}}@2x.png'></span> {{thirdDay}} .
+         {{daily[2].weather[0].main}} </div><div> {{daily[2].temp.max| number : '1.0-0'}}&deg; / {{daily[2].temp.min| number : '1.0-0'}}&deg;</div>
+    </div>
+    <div class="forecast-btn-place">
+        <a class="weekly-forecast-btn" routerLink='forecast/daily'>1 Week Forecast</a>
+    </div>
+</div>
+<app-weatherdetail></app-weatherdetail>   

@@ -1,0 +1,48 @@
+{
+  "$schema": "./node_modules/@angular/service-worker/config/schema.json",
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "resources": {
+        "files": [
+          "/favicon.ico",
+          "/index.html",
+          "/manifest.webmanifest",
+          "/*.css",
+          "/*.js"
+        ],
+        "urls": [
+          "https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100&display=swap",
+          "https://fonts.gstatic.com/**",
+          "https://openweathermap.org/img/**"
+        ]
+      }
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "resources": {
+        "files": [
+          "/assets/**",
+          "/*.(eot|svg|cur|jpg|png|webp|gif|otf|ttf|woff|woff2|ani)"
+        ]
+      }
+    }
+  ],
+  "dataGroups": [{
+    "name": "weather",
+    "urls":[
+      "https://api.openweathermap.org/data/2.5/**",
+      "http://localhost:3000/**"
+    ],
+    "cacheConfig": {
+      "maxSize": 10,
+      "timeout": "5s",
+      "maxAge": "100d",
+      "strategy": "freshness"
+    }
+  }]
+}

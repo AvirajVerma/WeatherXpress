@@ -1,0 +1,112 @@
+{
+  "configVersion": 1,
+  "timestamp": 1609694140436,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/4.5397b8a2e0f4f2803bab.js",
+        "/custom-service-worker.js",
+        "/favicon.ico",
+        "/index.html",
+        "/main.69f8cb22cedd16a50c70.js",
+        "/manifest.webmanifest",
+        "/ngsw-worker.js",
+        "/polyfills.35a5ca1855eb057f016a.js",
+        "/runtime.9ceb4ff3902e339c1372.js",
+        "/styles.7716326ebb5b3a66c6dc.css"
+      ],
+      "patterns": [
+        "https:\\/\\/fonts\\.googleapis\\.com\\/css2\\?family=Big\\+Shoulders\\+Text:wght@100&display=swap",
+        "https:\\/\\/fonts\\.gstatic\\.com\\/.*",
+        "https:\\/\\/openweathermap\\.org\\/img\\/.*"
+      ]
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/assets/icons/cross.svg",
+        "/assets/icons/home.svg",
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png",
+        "/assets/icons/search.svg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "weather",
+      "patterns": [
+        "https:\\/\\/api\\.openweathermap\\.org\\/data\\/2\\.5\\/.*",
+        "http:\\/\\/localhost:3000\\/.*"
+      ],
+      "strategy": "freshness",
+      "maxSize": 10,
+      "maxAge": 8640000000,
+      "timeoutMs": 5000,
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "version": 1
+    }
+  ],
+  "hashTable": {
+    "/4.5397b8a2e0f4f2803bab.js": "2aeac21ca78f969b17abda9d24b446ca09e3d675",
+    "/assets/icons/cross.svg": "f5adab735ca1f1434cf6a85fe010ac563e1d38d3",
+    "/assets/icons/home.svg": "1a36569c194ddc695ae43c614419e19565b49456",
+    "/assets/icons/icon-128x128.png": "935afc6c98fc9818e2a417c81281caed611eadb5",
+    "/assets/icons/icon-144x144.png": "196074952a5ea2640b506cf0497e591f66a6c545",
+    "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/assets/icons/icon-192x192.png": "f551e91ea2faf5db315b5a093de7720685a4021f",
+    "/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/assets/icons/icon-512x512.png": "e4982c515fb6840da4cdb9cfac353eb2b4036b10",
+    "/assets/icons/icon-72x72.png": "560262fc68070c24b9e986bbfd308eaf041d80c4",
+    "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/assets/icons/search.svg": "2ad785868a3ed80a633a235abe54e97340946eb4",
+    "/custom-service-worker.js": "6f93a8191c637abfdeceb0bf6f69af44368989a7",
+    "/favicon.ico": "f936f4169d52a070839bfcc5e9ae7e8c6b097f5d",
+    "/index.html": "c7cb369f934fc318c8d0106a5d4e1f2685aa579e",
+    "/main.69f8cb22cedd16a50c70.js": "b7d2061c58f77551a9eaffdddf872c03fa2651a1",
+    "/manifest.webmanifest": "e321c0d1171d2b1c091c0064b1ad8de8b53aa68a",
+    "/ngsw-worker.js": "d19570af85ec6cb7eaecfbcba0fecc28202a016d",
+    "/polyfills.35a5ca1855eb057f016a.js": "578360d24ce37383f261c7ef63b1f822d28e8dde",
+    "/runtime.9ceb4ff3902e339c1372.js": "bc202e61ccf2f2f91d32f512d0a4714c236425e8",
+    "/styles.7716326ebb5b3a66c6dc.css": "fdc092b5cac6869caf06c9ae9b935464cc0e1705"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
